@@ -15,11 +15,20 @@ generateBtn.addEventListener("click", writePassword);
 
 // NEW - Generate a password that meets the user's selected criteria
 function generatePassword {
-  // Prompt for password length
+
+  // NEW - Array definitions for each character type
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbericChars = "0123456789";
+  var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'. '('. ')'. '-', '_', '+', '+', '+', '{', '}', '[', ']', '|', ':', ';', '"', '<', '>', ',', '.', '?'];
+
+  // NEW - Prompt for password length
   var passwordLength = prompt("Enter password length (must be between 8 and 128 characters):");
-  // Validate password length
+
+  // NEW - Validate password length
   while (passwordLength < 8 || passwordLength > 128) {
     passwordLength = prompt("Invalid length. Please enter a length between 8 and 128 characters:");
   }
+
   // Other code for generating the password
 }
