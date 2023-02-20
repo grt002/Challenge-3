@@ -32,6 +32,10 @@ No installation is necessary to view this project. Simply click the link of the 
 
 ## Usage
 
+Repo URL: https://github.com/grt002/Challenge-3
+
+Deployed URL: https://grt002.github.io/Challenge-3/
+
 ![Screenshot of Functioning Page](assets/images/screenshot.PNG)
 
 ## Credits
