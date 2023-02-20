@@ -1,7 +1,7 @@
-// DEFAULT - Get references to the #generate element
+// FROM STARTER CODE - Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// DEFAULT - Write password to the #password input
+// FROM STARTER CODE - Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -10,7 +10,7 @@ function writePassword() {
 
 }
 
-// DEFAULT - Add event listener to generate button
+// FROM STARTER CODE - Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // NEW - Generate a password that meets the user's selected criteria
@@ -28,13 +28,17 @@ function generatePassword () {
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numericChars = "0123456789";
-  var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'. '('. ')'. '-', '_', '+', '{', '}', '[', ']', '|', ':', ';', '"', '<', '>', ',', '.', '?'];
+  var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '{', '}', '[', ']', '|', ':', ';', '"', '<', '>', ',', '.', '?'];
 
   // NEW - prompt for character types to include in the password
   var includeLowercase = confirm("Include lowercase letters?");
+  includeLowercase = (includeLowercase) ? true : false;
   var includeUppercase = confirm("Include uppercase letters?");
+  includeUppercase = (includeUppercase) ? true : false;
   var includeNumbers = confirm("Include numbers?");
+  includeNumbers = (includeNumbers) ? true : false;
   var includeSpecialChars = confirm("Include special characters?");
+  includeSpecialChars = (includeSpecialChars) ? true : false;
 
   // NEW - Validate that at least one character type is selected
   while (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecialChars) {
@@ -45,10 +49,28 @@ function generatePassword () {
     includeSpecialChars = confirm("Include special characters?");
   }
 
-  //NEW - Initialize the password string
+  // NEW - Initialize the password string
   var password = '';
 
-  // Other code for generating the password
+  // NEW - Combine all selected character types into one string
+  var charsToUse = '';
+  if (includeLowercase) {
+    charsToUse += lowercaseChars;
+  }
+  if (includeUppercase) {
+    charsToUse += uppercaseChars;
+  }
+  if (includeNumbers) {
+    charsToUse +=numericChars;
+  }
+  if (includeSpecialChars) {
+    charsToUse += specialChars.join('');
+  }
+
+  // NEW - Loop through the selected character types and randomly select characters to add to the password
+  for (var i = 0; i < passwordLength; i++) {
+    password += charsToUse.charAt(Math.floor(Math.random() * charsToUse.length));
+  }
 
   return password;
 }

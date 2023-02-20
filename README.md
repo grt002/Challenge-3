@@ -36,7 +36,7 @@ No installation is necessary to view this project. Simply click the link of the 
 
 ## Credits
 
-Up to this point, this project has been worked on solely by me, Garrett Tagliabue.
+This project was refactored by Garrett Tagliabue from an existing starter code given through the Bootcamp Spot course.
 
 ## License
 
