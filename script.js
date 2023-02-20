@@ -1,7 +1,7 @@
-// Get references to the #generate element
+// DEFAULT - Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// DEFAULT - Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -10,11 +10,11 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// DEFAULT - Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // NEW - Generate a password that meets the user's selected criteria
-function generatePassword {
+function generatePassword () {
 
   // NEW - Prompt for the password length
   var passwordLength = prompt("Enter password length (must be between 8 and 128 characters):");
@@ -28,11 +28,11 @@ function generatePassword {
   var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numericChars = "0123456789";
-  var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'. '('. ')'. '-', '_', '+', '+', '+', '{', '}', '[', ']', '|', ':', ';', '"', '<', '>', ',', '.', '?'];
+  var specialChars = ['!', '@', '#', '$', '%', '^', '&', '*'. '('. ')'. '-', '_', '+', '{', '}', '[', ']', '|', ':', ';', '"', '<', '>', ',', '.', '?'];
 
   // NEW - prompt for character types to include in the password
   var includeLowercase = confirm("Include lowercase letters?");
-  var includeUppercase = confirm("Include uppercase letters>");
+  var includeUppercase = confirm("Include uppercase letters?");
   var includeNumbers = confirm("Include numbers?");
   var includeSpecialChars = confirm("Include special characters?");
 
