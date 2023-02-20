@@ -36,11 +36,7 @@ No installation is necessary to view this project. Simply click the link of the 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Up to this point, this project has been worked on solely by me, Garrett Tagliabue.
 
 ## License
 
